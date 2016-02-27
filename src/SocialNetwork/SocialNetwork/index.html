@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js"></script>
+</head>
+<body>
+    
+    <input id="userNameInput" type="text" placeholder="Enter your user name..." />
+    <input id="textInput" type="text" placeholder="Enter your status..." />
+
+    <button id="publishPostButton">Publish post!</button>
+
+    <ul id="postsList"></ul>
+    
+    <script type="text/javascript">
+        $.ajax({
+            url: '/api/Posts/GetPosts',
+            method: 'GET',
+            dataType: 'JSON',
+            success: addPostsList
+        });
+
+        function addPostsList(posts) {
+            $.each(posts, function (index) {
+                var post = posts[index];
+                addPost(post);
+            });
+        }
+
+        function addPost(post) {
+            $("#postsList").append(
+                    '<li><b>' + post.UserName + '</b><br>' + post.Text + '</li><br>'
+                 );
+        }
+
+        $("#publishPostButton").click(function () {
+
+            var post = {
+                UserName: $("#userNameInput").val() || "Guest",
+                Text: $("#textInput").val()
+            };
+            $.ajax({
+                url: '/api/Posts/AddPost',
+                method: 'POST',
+                dataType: 'json',
+                data: post
+            });
+
+        });
+    </script>
+</body>
+</html>
