@@ -10,5 +10,10 @@
             UserName = userName;
             Text = text;
         }
+
+        public Post()
+        {
+
+        }
     }
 }
