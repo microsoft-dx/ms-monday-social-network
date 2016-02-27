@@ -1,4 +1,6 @@
-﻿using SocialNetwork.Models;
+﻿using Microsoft.AspNet.SignalR;
+using SocialNetwork.Hubs;
+using SocialNetwork.Models;
 using System.Collections.Generic;
 using System.Web.Http;
 
@@ -21,6 +23,8 @@ namespace SocialNetwork.Controllers
         public void AddPost(Post post)
         {
             Posts.Add(post);
+            GlobalHost.ConnectionManager.
+                GetHubContext<PostHub>().Clients.All.publishPost(post);
         }
     }
 }
