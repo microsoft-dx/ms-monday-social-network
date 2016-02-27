@@ -16,5 +16,11 @@ namespace SocialNetwork.Controllers
         {
             return Posts;
         }
+
+        [HttpPost]
+        public void AddPost(Post post)
+        {
+            Posts.Add(post);
+        }
     }
 }
