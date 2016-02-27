@@ -6,7 +6,7 @@ namespace SocialNetwork.Controllers
 {
     public class PostsController : ApiController
     {
-        public List<Post> Posts = new List<Post>() {
+        public static List<Post> Posts = new List<Post>() {
             new Post("Obi-Wan Kenobi","These are not the droids you're looking for"),
             new Post("Darth Vader","I find your lack of faith disturbing")
             };
