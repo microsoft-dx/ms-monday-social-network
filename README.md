@@ -34,7 +34,7 @@ Introduction to Web Technologies
 
 How do we start if we want to create a web application, then add an app that has the same functionality (and have the app on multiple platforms) ?
 
-Our goal is to create a single server (back-end) and have multiple clients (web, mobile, desktop, console) consuming data from the server.
+Our goal is to create a **single server** (back-end) and have **multiple clients** (web, mobile, desktop, console) consuming data from the server.
 
 **API** - Application Programming Interface - defines the functionality of various software components independent of the implementation.
 
@@ -60,7 +60,7 @@ The server accepts requests from the client (**no matter who the client is, the 
 
 ![enter image description here](https://hbwafw.bn1301.livefilestore.com/y3mANvEFZi4agT_N7fgET3wq6TP8D4nMKUn4cNDLroacGqjzk9iKSIcv38uqjcw3gzOpoR2Rz1iLmGW1uI0riU8Xd4Obrr5PBL8VpIPx_-Uu9EIF87vBETtQGzlAf-SYraxzz21EagM8e6OX6G33KUF_2SpEXPfE5aSG9cQ3AmqUgk?width=854&height=190&cropmode=none)
 
-In Asp.Net Web Api, the component that accepts requests, computes it and generates the response is called a **controller**.
+In Asp.Net Web Api, the component that **accepts requests**, computes it and **generates the response** is called a **controller**.
 
 
 > For more information about Asp.Net Web Api, visit the [official documentation.](http://www.asp.net/web-api/overview)
@@ -101,7 +101,7 @@ So, in our `Models` folder, let's add a class with two properties:
         {
         }
     }
-The class also contains a constructor for initializing the values of the properties and a default constructor.
+The class also contains a **constructor** for initializing the values of the properties and a **default constructor**.
 
 > Note: following the best practices, the models should be placed in the `Models` folder and controllers in the `Controllers` folder.
 
@@ -139,7 +139,7 @@ At this point, we can see if our application can accept requests. Start the appl
 
 ![enter image description here](https://vxr2qg.bn1301.livefilestore.com/y3mZ4-287E8Gms-7UNmceXoVPLgCTckZexDy-KsQd-HPG5GJEyF1N29oYuff23H8dovbVJp7j19q77rAMMCuMq5a9QgFRtdk9yFswThDzvYhqyW3TVfxl0HJTb5MnN7_S7cBud5A-9tw0lsH2zed7O78o8BvAT_5p1v_pIwoDbsw4E?width=1268&height=761&cropmode=none)
 
-At this point, a web browser instance should start with the `URL`: `http://localhost:port_number`
+A web browser instance should start with the `URL`: `http://localhost:port_number`
 
 If we want to see if our app works, we should navigate to the following `URL`: `/api/Posts/GetPosts`
 
@@ -207,7 +207,7 @@ For this step, we are only displaying the posts:
     </html>
 
 
-We created an unordered list (`<ul>`) in which to display the messages.
+We created an **unordered list** (`<ul>`) in which to display the messages.
 Then, we used `jQuery` to make a request to the server and call the method `GetPosts`. If the request is successful, then call the `addPost` method.
 
 > For a complete documentation for the `ajax` method, [see this resource.](http://api.jquery.com/jquery.ajax/)
@@ -272,13 +272,13 @@ We need two text inputs for the user name and the post and a button.
      </body>
     </html>
 
-If we want to see our new post, we have to refresh the page, which make the user experience really, really bad.
+If we want to see our new post, we have to **refresh the page**, which make the user experience really, really bad.
 
 
 Adding real-time communication
 ---------------------------------------
 
-If we want the user experience improved, we must add real-time communication. This means that the client does not have to refresh the browser in order to receive data.
+If we want the user experience improved, we must add **real-time communication**. This means that **the client does not have to refresh the browser** in order to receive data.
 
 To achieve this, we are going to use a library called `SignalR` that really simplifies the communication.
 
@@ -331,8 +331,8 @@ Now, we connect the clients to the hub and define the `publishPost` method:
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.2.0.min.js"></script>
     <script src="/signalr/hubs"></script>
-</head>
-<body>
+    </head>
+    <body>
     
     <input id="userNameInput" type="text" placeholder="Enter your user name..." />
     <input id="textInput" type="text" placeholder="Enter your status..." />
@@ -386,7 +386,7 @@ Now, we connect the clients to the hub and define the `publishPost` method:
      </body>
     </html>
 
-Right now, whenever a user publishes a new post, all clients will be updated instantly.
+Right now, **whenever a user publishes a new post, all clients will be updated instantly.**
 
 
 Creating the console client
@@ -448,11 +448,11 @@ In this case, we would keep the posts in a `List` in memory anymore, but in a `S
 > For information about managing `SQL` databases from web applications, [check this resource.](https://azure.microsoft.com/en-us/documentation/articles/web-sites-dotnet-rest-service-aspnet-api-sql-database/)
 > This resource uses an `SQL` database host in [Azure (Microsoft Azure SQL Service).](https://azure.microsoft.com/en-us/documentation/services/sql-database/)
 
-We should also add authentication and authorization to our application.
+We should also add **authentication and authorization** to our application.
 
 > For samples and documentation about authentication and authorization, [see this resource.](http://www.asp.net/web-api/overview/security)
 
-Another step is to publish our entire application in the cloud. This would give us the ability to scale up and down on demand.
+Another step is to publish our entire application in the cloud. This would give us the ability to **scale up and down on demand**.
 
 
 Furthermore, we can start creating mobile applications that consume data from the server we just created.
@@ -463,14 +463,14 @@ Furthermore, we can start creating mobile applications that consume data from th
 > 
 > The advantage of using Xamarin for mobile applications is that you create applications for all major mobile platforms using the same code for the logic of the application.
 
-Next, we can deliver real-time push notifications to these mobile applications using 
+Next, we can deliver real-time **push notifications** to these mobile applications using Azure Push Notification Service.
 
 > [Documentation for delivering push notifications for most mobile and desktop platforms using Microsoft Azure.](https://azure.microsoft.com/en-us/documentation/services/notification-hubs/)
 
 Conclusion
 -------------
 
-We created a web service that is capable of delivering data to most clients available, that communicates in real-time with the clients.
+We created a web service that is capable of delivering data to most clients available and communicates in real-time with the clients.
 
 Moreover, we can extend the project and add mobile applications with push notifications, all of these with a minimum of code.
 
