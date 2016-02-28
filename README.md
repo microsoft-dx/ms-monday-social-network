@@ -387,3 +387,87 @@ Now, we connect the clients to the hub and define the `publishPost` method:
     </html>
 
 Right now, whenever a user publishes a new post, all clients will be updated instantly.
+
+
+Creating the console client
+--------------------------------
+
+As we said earlier, this API can be used with any client that supports `HTTP` communication.
+
+Since is the easiest to implement, we will consider creating a console application that displays the posts that are published, also using real-time communication.
+
+Basically, we do the same `HTTP`operation, but this time in a `.NET` client.
+
+                using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:26315");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                HttpResponseMessage response = await client.GetAsync("api/Posts/GetPosts");
+                if (response.IsSuccessStatusCode)
+                {
+                    var data = await response.Content.ReadAsStringAsync();
+                    var posts = JsonConvert.DeserializeObject<List<Post>>(data);
+                    foreach (var post in posts)
+                        PrintPost(post);
+                }
+            }
+
+> Note: If the console client doesn't work, you might want to check the `localhost` instance that the web server is running and modify it in `Program.cs`
+
+            static void PrintPost(Post post)
+        {
+            System.Console.WriteLine(
+            "{0}: {1}", post.UserName, post.Text);
+        }
+
+> For more information about consuming data from Web Api in a .NET client, [check the official documentation.](http://www.asp.net/web-api/overview/advanced/calling-a-web-api-from-a-net-client)
+
+In order to add the real-time functionality, we use the following: 
+
+            var hubConnection = new HubConnection("http://localhost:26315");
+            var hub = hubConnection.CreateHubProxy("PostHub");
+
+            hub.On<Post>("publishPost", (post) => PrintPost(post) );
+            hubConnection.Start().Wait();
+
+Again, we do the same thing as in JavaScript, this time in a .NET client.
+
+> For more information about using SignalR with a .NET client, [check the official documentation.](http://www.asp.net/signalr/overview/guide-to-the-api/hubs-api-guide-net-client)
+
+Next steps
+-------------
+
+Right now, every time we stop the debugger, the data we insert in lost, because we keep our posts in a `List` in memory.
+
+The first most obvious step would be to **add database support** to our application.
+
+In this case, we would keep the posts in a `List` in memory anymore, but in a `SQL` database.
+
+> For information about managing `SQL` databases from web applications, [check this resource.](https://azure.microsoft.com/en-us/documentation/articles/web-sites-dotnet-rest-service-aspnet-api-sql-database/)
+> This resource uses an `SQL` database host in [Azure (Microsoft Azure SQL Service).](https://azure.microsoft.com/en-us/documentation/services/sql-database/)
+
+Another step is to publish our entire application in the cloud. This would give us the ability to scale up and down on demand.
+
+
+Furthermore, we can start creating mobile applications that consume data from the server we just created.
+
+
+> [Resources for developing iOS applications using C# code here (Xamarin).](https://developer.xamarin.com/guides/ios/getting_started/)
+>[ Resources for developing Android applications using C# code here (Xamarin).](https://developer.xamarin.com/guides/android/getting_started/)
+> 
+> The advantage of using Xamarin for mobile applications is that you create applications for all major mobile platforms using the same code for the logic of the application.
+
+Next, we can deliver real-time push notifications to these mobile applications using 
+
+> [Documentation for delivering push notifications for most mobile and desktop platforms using Microsoft Azure.](https://azure.microsoft.com/en-us/documentation/services/notification-hubs/)
+
+Conclusion
+-------------
+
+We created a web service that is capable of delivering data to most clients available, that communicates in real-time with the clients.
+
+Moreover, we can extend the project and add mobile applications with push notifications, all of these with a minimum of code.
+
+We are able to serve all client capable of `HTTP` communication writing a single web service for the back-end and reusing most of the code for the mobile applications.
