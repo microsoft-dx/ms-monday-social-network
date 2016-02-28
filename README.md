@@ -448,6 +448,10 @@ In this case, we would keep the posts in a `List` in memory anymore, but in a `S
 > For information about managing `SQL` databases from web applications, [check this resource.](https://azure.microsoft.com/en-us/documentation/articles/web-sites-dotnet-rest-service-aspnet-api-sql-database/)
 > This resource uses an `SQL` database host in [Azure (Microsoft Azure SQL Service).](https://azure.microsoft.com/en-us/documentation/services/sql-database/)
 
+We should also add authentication and authorization to our application.
+
+> For samples and documentation about authentication and authorization, [see this resource.](http://www.asp.net/web-api/overview/security)
+
 Another step is to publish our entire application in the cloud. This would give us the ability to scale up and down on demand.
 
 
