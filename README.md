@@ -179,8 +179,6 @@ For this step, we are only displaying the posts:
     <body>
 
      <ul id="postsList"></ul>
-
-     <script type="text/javascript">
        
     <script type="text/javascript">
         $.ajax({
@@ -231,8 +229,6 @@ We need two text inputs for the user name and the post and a button.
 
     <button id="publishPostButton">Publish post!</button>
      <ul id="postsList"></ul>
-
-     <script type="text/javascript">
        
     <script type="text/javascript">
         $.ajax({
