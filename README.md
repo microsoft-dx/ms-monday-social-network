@@ -42,7 +42,7 @@ In the case of web development, an API can be translated into a web service that
 
 Let's consider a modern application which includes a web application and several mobile apps for iOS, Android, Windows Phone and applications for Windows, Ubuntu and OS X.
 
-![enter image description here](https://wuyuiq.bn1301.livefilestore.com/y3mTl9mYvCUNOjZFF0RZem7ChIfDbL4NQiKXKcEgOy1LSlCRoc6eMMBi_9ddPJmlF9s-lQrllha7vUsGsj1h1gpzOTkcShSA0R91j9n1eiJWdQhSFu3ZkZ3ZNSuF8IiOJSK_I7GAiGqz3zbNdzhEKSOunGiaR7DUjzP6dye0SeLxZA?width=1024&height=702&cropmode=none)
+![enter image description here](https://wuyuiq.bn.files.1drv.com/y4mgKSnZJw_ZmDEIU8mRqytm_w9ADzIPXLIAdlB2ZnA4zttqQc-nDwoAScizVgZpRcEGuzDKNpc-jX1ibEfO7emPFlq7kHx5M7qN9DQyT6w1sqYL3BdJeaq9Yo2Md4Mw0tHs7KSWnYCeIS8ofi383bjZd1hjhTLZVdzMn7JPt-MCp2v_NEYTDjHl8XNdszyr_ogiPfvqg8xHY8OnNfF3xHTUA?width=1024&height=702&cropmode=none)
 
 Why is this an example of a bad architecture?
 
@@ -50,7 +50,7 @@ If a requirement comes for the business logic, **all** applications must be upda
 
 We are going to create the following architecture: 
 
-![enter image description here](https://jtjs5g.bn1301.livefilestore.com/y3mNpwuDK-HEjZ5DxmEs4HfGxrOfWUuYrAveC_iTO7t95XUTJaEQWD2LBnX1mir7uuOsGMuFWpDGxQ6rxwkMw8Cd6uhA6X6tEBVyqWpEXNWZrM5dEWAAZDkS8aDu-BqZICXoooCGXjANvJfhB4wE7_8dTBYYVfeYpoGtxXCMwCInmc?width=1021&height=448&cropmode=none)
+![enter image description here](https://jtjs5g.bn.files.1drv.com/y4mmVoutc_1Xoz1EpDelmjDkIRLQKx2C06iP_N5z4LMf9iHw4GzhMcUPSG2EiCqdWd0NREWRaFd8AqeBjGJloxosNocTqaz2nRvZzMcW9PYkeQ_lLx1_sFPVWU3gBiuGKAlSW9W6wWU-mzOagR4rshzX4DFDHaeWDkAABaiNA_mQmBq2oEzhFhk4EdUsv2mybFaBp_0njCvPCdsH6bONG8rKA?width=1021&height=448&cropmode=none)
 
 Now, if anything needs to change in the business logic, we only need to apply that change once.
 
@@ -58,7 +58,7 @@ We are going to create a back-end that will be used with the easiest to implemen
 
 The server accepts requests from the client (**no matter who the client is, the server can accept requests**) and gives back a response.
 
-![enter image description here](https://hbwafw.bn1301.livefilestore.com/y3mANvEFZi4agT_N7fgET3wq6TP8D4nMKUn4cNDLroacGqjzk9iKSIcv38uqjcw3gzOpoR2Rz1iLmGW1uI0riU8Xd4Obrr5PBL8VpIPx_-Uu9EIF87vBETtQGzlAf-SYraxzz21EagM8e6OX6G33KUF_2SpEXPfE5aSG9cQ3AmqUgk?width=854&height=190&cropmode=none)
+![enter image description here](https://hbwafw.bn.files.1drv.com/y4mRkB9-m7Tt3Wumx0dYEDmBl1OpbyjN-tKyhfpHfBJSOQo39tjPnHG26t7580PBGTjy9SJAZw-AfVM5TpDhtWbtKyuHbDUx_LthxhA5--NUvt0WXg2JBYvP5_b7Z9hkztASFLZlg0WXsnhRDARtxjxNlKecJDh_tCQ5oj8fmcTiER5Lb5ZddxwKOoDv8SQFS-fEws8fmtGvhjm6beMwgt0HQ?width=854&height=190&cropmode=none)
 
 In Asp.Net Web Api, the component that **accepts requests**, computes it and **generates the response** is called a **controller**.
 
@@ -75,11 +75,11 @@ First of all, let's see how to create a Web Api solution from Visual Studio.
 New Project --> Web --> ASP.NET Web Application
 Then, enter the name and click OK.
 
-![enter image description here](https://h5gnuq.bn1301.livefilestore.com/y3mEFjE8fAHeOBEK0HgKZvMZXCNohJ_6CSZP1QisPvPPwyYatU2kKrB3YKnZXfbCe-yhVAGbol1p8wJwMEX8WfoqtYEDiD17ncIeJcFStxW3UJYSWuH7zYq3p4jcLJ0G3bggAEZJEH0zW-GEBkh6H0j_KaMcyei1flp2xSaJFUQhWs?width=1911&height=1111&cropmode=none)
+![enter image description here](https://h5gnuq.bn.files.1drv.com/y4ml0_wJbm1f82tCszQjZww9BHtT5DLzTffHbmQbuCeFxaDsyOs2c7XauoHcW9Fs2jWEynBFFVN4B_jOjtdugzYGXfjRdVWdQIquGHpT0J7oSnErg0CvhkTpsg7WKApqcNh1daSfzi5ktlw8g3NvwkXiEptZisPmAKIbqStW4X8r6L6E_XcviV6N8-iJS7SLruF4RFryFHu62l-4edPC49PbQ?width=1911&height=1111&cropmode=none)
 
 Next, choose the Empty template from the ASP.NET 4.6 with Web Api folders included, no Authentication and not hosted in the Cloud.
 
-![enter image description here](https://ugvpxa.bn1301.livefilestore.com/y3mc7vxo6kSsVm1zn2Pqj0EJprkBiFOmaInGC_3nFWSG5nBXcb9AW59OLO6XxaAGlCs8_azPFU6Nzzg9hS8TfzXOFhkXkkrncS9j5VGwyGP2CRDPCIcVm698BxkuX-0lQy7nTjJkSp6DhTN1o2F7S-5j9grt6DJvl3XzV5MIXtmYEQ?width=1913&height=1131&cropmode=none)
+![enter image description here](https://ugvpxa.bn.files.1drv.com/y4mKgl9yGSGBT_sBKkMr2oNhampdMFm3eh-IfSXPAY2gRBfk4kbRDGWhXB-CCEUolsK9KUmRZJVHNT83WR7TKVLuEZZBUnIzQLSa1Pj81CASTCeOOCJh42FFT-TDc4wHYV_2Z037mvNffWYmrDIMauMOVZUq3VA-GUG4DkkeC5E647I8ykRYPyRXdlhhWe8B9O3foGRtLHWjlpsqWmjinie8Q?width=1913&height=1131&cropmode=none)
 
 Now we have a basic structure for implementing the web service.
 
@@ -137,7 +137,7 @@ We also have a public method called `GetPosts` that returns the entire list.
 
 At this point, we can see if our application can accept requests. Start the application by pressing the `Start` button or by pressing `F5`.
 
-![enter image description here](https://vxr2qg.bn1301.livefilestore.com/y3mZ4-287E8Gms-7UNmceXoVPLgCTckZexDy-KsQd-HPG5GJEyF1N29oYuff23H8dovbVJp7j19q77rAMMCuMq5a9QgFRtdk9yFswThDzvYhqyW3TVfxl0HJTb5MnN7_S7cBud5A-9tw0lsH2zed7O78o8BvAT_5p1v_pIwoDbsw4E?width=1268&height=761&cropmode=none)
+![enter image description here](https://vxr2qg.bn.files.1drv.com/y4mHjp80iYRNKIFp7wzUCk8QQpARec2e1srGBOUhQHuPpGKqtNOA7ErtmLaWGmVeck8xXwBo9gMPW5MY4GmSo_5bUfQrimAdJg-UwRx0UmhU7qZBk3QcIneRP_PLfwDxeRhs8q_02SUxSBqbwhPBm7nQREIiqIeXkNoBdRmP_OTCaibnaiCmUe38m1IngsQ_sp4EF1XKscI6wXsMYwr-g8vHg?width=1268&height=761&cropmode=none)
 
 A web browser instance should start with the `URL`: `http://localhost:port_number`
 
@@ -148,7 +148,7 @@ If we want to see if our app works, we should navigate to the following `URL`: `
 
 After navigating to the `URL` above, we can see the raw data from the server:
 
-![enter image description here](https://gepija.bn1301.livefilestore.com/y3m0En5IZPxQTlgPbU4MLpoAdYre6GJmCLqrZW8grh3AuH_zx6ttSJU-B_TMgbHzapP1BMI_ZdOhXG83m3MSZA0juDS_eDuVc9pMQONHoWd0Sa_wnp--6L574sRrDTgk6P-fXa0CBQUKivmCql799TJ40lLNM-RG8T54MYYw9eiFU4?width=1251&height=251&cropmode=none)
+![enter image description here](https://gepija.bn.files.1drv.com/y4mJXJjVvY3ZTR9YIa1sEu-1FG16ecPni8vFghLdnaepZcye5dp_mglq0Dxo6G0pByHnybOaAAscpP4w6IqqBJ6PUVHmimERQftXQ2LAwdfjxLeRmqtJiKvwi7aCHArDjz3CkIrwahMlWXizZ-tgofBo3kSqQYC0mVN33SU7DjFNTjKxHMFBL0zw7HbiXrRMLMtrhkZZ28MMlhpPeBIc70aDw?width=1251&height=251&cropmode=none)
 
 > Note that in order to see the JSON formatted this way, I used a [Google Chrome Extension called JSON Formatter.](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en)
 
