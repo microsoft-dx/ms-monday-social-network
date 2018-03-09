@@ -42,7 +42,7 @@ In the case of web development, an API can be translated into a web service that
 
 Let's consider a modern application which includes a web application and several mobile apps for iOS, Android, Windows Phone and applications for Windows, Ubuntu and OS X.
 
-![enter image description here](https://wuyuiq.bn.files.1drv.com/y4mgKSnZJw_ZmDEIU8mRqytm_w9ADzIPXLIAdlB2ZnA4zttqQc-nDwoAScizVgZpRcEGuzDKNpc-jX1ibEfO7emPFlq7kHx5M7qN9DQyT6w1sqYL3BdJeaq9Yo2Md4Mw0tHs7KSWnYCeIS8ofi383bjZd1hjhTLZVdzMn7JPt-MCp2v_NEYTDjHl8XNdszyr_ogiPfvqg8xHY8OnNfF3xHTUA?width=1024&height=702&cropmode=none)
+[![01](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/01.jpg?raw=true)](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/01.jpg)
 
 Why is this an example of a bad architecture?
 
@@ -50,7 +50,7 @@ If a requirement comes for the business logic, **all** applications must be upda
 
 We are going to create the following architecture: 
 
-![enter image description here](https://jtjs5g.bn.files.1drv.com/y4mmVoutc_1Xoz1EpDelmjDkIRLQKx2C06iP_N5z4LMf9iHw4GzhMcUPSG2EiCqdWd0NREWRaFd8AqeBjGJloxosNocTqaz2nRvZzMcW9PYkeQ_lLx1_sFPVWU3gBiuGKAlSW9W6wWU-mzOagR4rshzX4DFDHaeWDkAABaiNA_mQmBq2oEzhFhk4EdUsv2mybFaBp_0njCvPCdsH6bONG8rKA?width=1021&height=448&cropmode=none)
+[![02](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/02.jpg?raw=true)](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/02.jpg)
 
 Now, if anything needs to change in the business logic, we only need to apply that change once.
 
@@ -58,7 +58,7 @@ We are going to create a back-end that will be used with the easiest to implemen
 
 The server accepts requests from the client (**no matter who the client is, the server can accept requests**) and gives back a response.
 
-![enter image description here](https://hbwafw.bn.files.1drv.com/y4mRkB9-m7Tt3Wumx0dYEDmBl1OpbyjN-tKyhfpHfBJSOQo39tjPnHG26t7580PBGTjy9SJAZw-AfVM5TpDhtWbtKyuHbDUx_LthxhA5--NUvt0WXg2JBYvP5_b7Z9hkztASFLZlg0WXsnhRDARtxjxNlKecJDh_tCQ5oj8fmcTiER5Lb5ZddxwKOoDv8SQFS-fEws8fmtGvhjm6beMwgt0HQ?width=854&height=190&cropmode=none)
+[![03](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/03.jpg?raw=true)](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/03.jpg)
 
 In Asp.Net Web Api, the component that **accepts requests**, computes it and **generates the response** is called a **controller**.
 
@@ -75,11 +75,11 @@ First of all, let's see how to create a Web Api solution from Visual Studio.
 New Project --> Web --> ASP.NET Web Application
 Then, enter the name and click OK.
 
-![enter image description here](https://h5gnuq.bn.files.1drv.com/y4ml0_wJbm1f82tCszQjZww9BHtT5DLzTffHbmQbuCeFxaDsyOs2c7XauoHcW9Fs2jWEynBFFVN4B_jOjtdugzYGXfjRdVWdQIquGHpT0J7oSnErg0CvhkTpsg7WKApqcNh1daSfzi5ktlw8g3NvwkXiEptZisPmAKIbqStW4X8r6L6E_XcviV6N8-iJS7SLruF4RFryFHu62l-4edPC49PbQ?width=1911&height=1111&cropmode=none)
+[![04](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/04.jpg?raw=true)](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/04.jpg)
 
 Next, choose the Empty template from the ASP.NET 4.6 with Web Api folders included, no Authentication and not hosted in the Cloud.
 
-![enter image description here](https://ugvpxa.bn.files.1drv.com/y4mKgl9yGSGBT_sBKkMr2oNhampdMFm3eh-IfSXPAY2gRBfk4kbRDGWhXB-CCEUolsK9KUmRZJVHNT83WR7TKVLuEZZBUnIzQLSa1Pj81CASTCeOOCJh42FFT-TDc4wHYV_2Z037mvNffWYmrDIMauMOVZUq3VA-GUG4DkkeC5E647I8ykRYPyRXdlhhWe8B9O3foGRtLHWjlpsqWmjinie8Q?width=1913&height=1131&cropmode=none)
+[![05](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/01.jpg?raw=true)](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/05.jpg)
 
 Now we have a basic structure for implementing the web service.
 
@@ -137,7 +137,7 @@ We also have a public method called `GetPosts` that returns the entire list.
 
 At this point, we can see if our application can accept requests. Start the application by pressing the `Start` button or by pressing `F5`.
 
-![enter image description here](https://vxr2qg.bn.files.1drv.com/y4mHjp80iYRNKIFp7wzUCk8QQpARec2e1srGBOUhQHuPpGKqtNOA7ErtmLaWGmVeck8xXwBo9gMPW5MY4GmSo_5bUfQrimAdJg-UwRx0UmhU7qZBk3QcIneRP_PLfwDxeRhs8q_02SUxSBqbwhPBm7nQREIiqIeXkNoBdRmP_OTCaibnaiCmUe38m1IngsQ_sp4EF1XKscI6wXsMYwr-g8vHg?width=1268&height=761&cropmode=none)
+[![06](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/01.jpg?raw=true)](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/06.jpg)
 
 A web browser instance should start with the `URL`: `http://localhost:port_number`
 
@@ -148,7 +148,7 @@ If we want to see if our app works, we should navigate to the following `URL`: `
 
 After navigating to the `URL` above, we can see the raw data from the server:
 
-![enter image description here](https://gepija.bn.files.1drv.com/y4mJXJjVvY3ZTR9YIa1sEu-1FG16ecPni8vFghLdnaepZcye5dp_mglq0Dxo6G0pByHnybOaAAscpP4w6IqqBJ6PUVHmimERQftXQ2LAwdfjxLeRmqtJiKvwi7aCHArDjz3CkIrwahMlWXizZ-tgofBo3kSqQYC0mVN33SU7DjFNTjKxHMFBL0zw7HbiXrRMLMtrhkZZ28MMlhpPeBIc70aDw?width=1251&height=251&cropmode=none)
+[![07](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/01.jpg?raw=true)](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/07.jpg)
 
 > Note that in order to see the JSON formatted this way, I used a [Google Chrome Extension called JSON Formatter.](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en)
 
