@@ -79,7 +79,7 @@ Then, enter the name and click OK.
 
 Next, choose the Empty template from the ASP.NET 4.6 with Web Api folders included, no Authentication and not hosted in the Cloud.
 
-[![05](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/01.jpg?raw=true)](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/05.jpg)
+[![05](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/05.jpg?raw=true)](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/05.jpg)
 
 Now we have a basic structure for implementing the web service.
 
@@ -137,7 +137,7 @@ We also have a public method called `GetPosts` that returns the entire list.
 
 At this point, we can see if our application can accept requests. Start the application by pressing the `Start` button or by pressing `F5`.
 
-[![06](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/01.jpg?raw=true)](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/06.jpg)
+[![06](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/06.jpg?raw=true)](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/06.jpg)
 
 A web browser instance should start with the `URL`: `http://localhost:port_number`
 
@@ -148,7 +148,7 @@ If we want to see if our app works, we should navigate to the following `URL`: `
 
 After navigating to the `URL` above, we can see the raw data from the server:
 
-[![07](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/01.jpg?raw=true)](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/07.jpg)
+[![07](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/07.jpg?raw=true)](https://github.com/microsoft-dx/ms-monday-social-network/blob/master/images/07.jpg)
 
 > Note that in order to see the JSON formatted this way, I used a [Google Chrome Extension called JSON Formatter.](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en)
 
